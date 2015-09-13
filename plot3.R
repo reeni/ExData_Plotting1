@@ -5,6 +5,7 @@ sub_date <- as.Date(energy$Date,format="%d/%m/%Y")
 rnum1<-which(sub_date == "2007-02-01")
 rnum2<-which(sub_date == "2007-02-02")
 rnum<-c(rnum1,rnum2)
+ga1<-energy[rnum,]
 datetime <- strptime(paste(energy[rnum,]$Date, energy[rnum,]$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
 
 --3
